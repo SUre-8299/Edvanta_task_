@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Code Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.0.0/split.min.js" integrity="sha512-tTsZnBXEzNdEaqUO9Ok8fUofS73xieiBa54pD/sxOSvayIgItM9MmEM0CnUjA13LDnJT22sfwmjf20+Bo2174g==" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header or navbar start from here -->
+    <section id="navbar">
+        <nav class="navbar">
+            <div class="nav-container">
+                <span class="nav-logo">Surendra_Yadav</span>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./Profile_page.html">About_Me</a></li>
+                    <li><a href="https://github.com/SUre-8299" target="_blank">Git-Repository</a></li>
+                    <!-- <li><a href="#">Contact</a></li> -->
+                </ul>
+                <button class="nav-toggler" id="navToggler">&#9776;</button>
+            </div>
+        </nav>
+    </section>
+    <!-- Header or navbar end at here -->
+
+    <!-- code-editor-box section start from here -->
+    <section id="code-editor-box">
+        <div class="container split">
+            <h1>"Enter your HTML, CSS, and JavaScript code below."</h1>
+            <!-- Text area for Html Code  -->
+            <textarea id="htmlCode"  placeholder="Type HTML code here" spellcheck="false" oninput="update(0)" onkeydown="handleTabKey(event)"></textarea>
+
+            <!-- Text area for Css Code  -->
+            <textarea id="cssCode" placeholder="Type CSS code here" spellcheck="false" oninput="update(0)" onkeydown="handleTabKey(event)"></textarea>
+
+            <!-- Text area for Javascript Code  -->
+            <textarea id="javascriptCode" spellcheck="false" placeholder="Type JavaScript code here" oninput="update(0)" onkeydown="handleTabKey(event)"></textarea>
+        </div>
+        <!-- iframe-viewer where realtime output will be show -->
+        <div class="iframe-container split">
+            <h1>"Real-time Display Available Here."</h1>
+            <iframe id="viewer"></iframe>
+        </div>
+    </section> <br><br><br>
+    <!-- code-editor-box section end at here -->
+      
+    <!-- Buttons section  start from here-->
+    <section id="buttons">
+        <div class="editor__buttons">
+            <button id="copyBtn" class="editor__button">Copy</button>
+            <button id="saveBtn" class="editor__button">Save</button>
+            <button id="lockBtn" class="editor__button" data-locked="false">Lock</button>
+        </div>
+    </section>
+    <!-- Buttons section end at here-->
+
+    <!-- Footer section start  from here -->
+    <section id="footer">
+        <footer class="site-footer">
+            <div class="footer-content">
+                &copy; 2023 surendrayadav7668@gmail.com. All Rights Reserved.
+            </div>
+        </footer>        
+    </section>
+    <!-- Footer section end at here -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

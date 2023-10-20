@@ -1,0 +1,53 @@
+1. Overview:
+
+The Basic Code Editor is a simple web-based application that provides users with the capability to practice and preview HTML, CSS, and JavaScript code. It offers a split-screen interface where users can type in their code on one side and see the live rendered output on the other.
+
+2. Code Editor Section:
+
+Split into three textareas, each dedicated to HTML, CSS, and JavaScript respectively.
+Users can write their code within these textareas.
+Each textarea has real-time update functionality (on input) and a custom tab key handling to maintain the code indentation within them.
+The update function takes care of rendering the combined HTML, CSS, and JavaScript into an iframe. This allows users to see live previews of their code.
+Live Preview Section:
+
+An iframe is used to display the output of the code written in the editor.
+As users type or make changes in any of the textareas, the live preview gets updated, giving instant feedback.
+
+
+4. Action Buttons:
+
+Copy Button: Copies the content from the textareas.
+Save Button: A placeholder for a save action. In the current implementation, it just alerts the user but can be extended to save the code to a backend server or a file.
+Lock Button: Allows users to lock or unlock the textareas. When locked, the textareas become read-only, preventing further edits.
+
+
+5. Technology Stack:
+
+HTML: Provides the structure of the web application.
+CSS: (Not provided in the snippet) Would be responsible for styling and designing the layout of the code editor.
+JavaScript: Enables dynamic interactions in the web application like toggling the navbar, live updating the iframe content, handling textarea tabs, copying content, and locking the textareas.
+Split.js: An external library that seems to be linked to the project, presumably to handle the split-screen functionality.
+
+
+use the dummy content
+
+<!-- <div class="customDiv" id="dynamicDiv">
+    Click to change my color!
+</div> -->
+
+<!-- .customDiv {
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+} -->
+
+<!-- document.getElementById('dynamicDiv').addEventListener('click', function() {
+    // Generate a random color
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    this.style.backgroundColor = randomColor;
+}); -->
+
